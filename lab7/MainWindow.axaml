@@ -5,5 +5,23 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="lab7.MainWindow"
         Title="lab7">
-    Welcome to Avalonia!
+    <StackPanel Margin="20" Spacing="15">
+        <TextBlock Text="Wprowadź sekwencję DNA:" FontWeight="Bold"/>
+
+        <TextBox Name="InputTextBox"
+                 Height="100"
+                 TextWrapping="Wrap"
+                 PlaceholderText="np. ACGTACGTACGT"/>
+
+        <Button Content="Zlicz sekwencje o długości 4"
+                Click="ButtonClicked"
+                HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Center"/>
+
+        <TextBlock Text="Wynik analizy:" FontWeight="Bold" Margin="0,10,0,0"/>
+
+        <ScrollViewer Height="200">
+            <TextBlock Name="ResultTextBlock" TextWrapping="Wrap" />
+        </ScrollViewer>
+    </StackPanel>
 </Window>
